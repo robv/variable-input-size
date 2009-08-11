@@ -1,6 +1,6 @@
 (function($) {
 
-	$.fn.variable_input_size = function(params) {
+	$.fn.variable_size = function(params) {
 		
 		// merge default and user parameters
 		params = $.extend( {default_size: 10}, params);
@@ -16,7 +16,19 @@
 				$this.attr('size', $this.attr('value').length);
 			
 			$this.focus(function() {
-				$this.attr('size', params.default_size);
+				
+				if($this.attr('value').length > params.default_size)
+					$this.attr('size', $this.attr('value').length);
+				else
+					$this.attr('size', params.default_size);
+					
+				$this.keyup(function() {
+					if($this.attr('value').length > params.default_size)
+						$this.attr('size', $this.attr('value').length);
+					else
+						$this.attr('size', params.default_size);
+				});
+				
 			}).blur(function() {
 				if ($this.attr('value').length == 0)
 					$this.attr('size', params.default_size);
