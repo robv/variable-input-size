@@ -1,4 +1,11 @@
-Please visit http://thisisrobv.com/2009/08/10/introducing-a-new-jquery-plugin-variable-input-size/ for sample usage and more information.
+Please visit http://thisisrobv.com/2009/08/10/introducing-a-new-jquery-plugin-variable-input-size/ for sample usage and 
+more information.
+
+REQUIREMENT:
+jQuery
+
+SAMPLE USAGE:
+$('input.variable').variable_size({default_size: 20});
 
 TODO:
 
