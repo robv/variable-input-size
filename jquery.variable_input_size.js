@@ -11,9 +11,13 @@
 			var $this = $(this);
 			
 			if ($this.attr('value').length == 0)
+			{
 				$this.attr('size', params.default_size);
+			}
 			else
+			{
 				$this.attr('size', $this.attr('value').length);
+			}
 			
 			$this.focus(function() {
 				
